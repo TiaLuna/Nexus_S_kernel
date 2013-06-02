@@ -83,6 +83,7 @@ struct fiq_debugger_state {
 
 #ifdef CONFIG_FIQ_DEBUGGER_CONSOLE
 	struct console console;
+	struct tty_driver *tty_driver;
 	struct tty_struct *tty;
 	int tty_open_count;
 	struct fiq_debugger_ringbuf *tty_rbuf;
